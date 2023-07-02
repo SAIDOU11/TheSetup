@@ -24,3 +24,6 @@ function Animal(data) {
 
 const tillyTheTiger = new Animal(animalForRelease1);
 const nellyTheElephant = new Animal(animalForRelease2);
+
+console.log(tillyTheTiger);
+console.log(nellyTheElephant);
