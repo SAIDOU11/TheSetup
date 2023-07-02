@@ -14,4 +14,13 @@ const animalForRelease2 = {
   dateOfRelease: "03-02-22",
 };
 
-function Animal(data) {}
+function Animal(data) {
+  this.species = data.species;
+  this.name = data.name;
+  this.weightKg = data.weightKg;
+  this.age = data.age;
+  this.dateOfRelease = data.dateOfRelease;
+}
+
+const tillyTheTiger = new Animal(animalForRelease1);
+const nellyTheElephant = new Animal(animalForRelease2);
