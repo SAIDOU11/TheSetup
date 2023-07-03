@@ -1,35 +1,22 @@
-const hotel1 = {
-  name: "Safari View",
-  rooms: 30,
-  stars: "⭐⭐⭐⭐⭐",
-  costPerNightAdult: 240,
-  costPerNightChild: 180,
+const sandraKayeProfileData = {
+  name: "Sandra Kaye",
+  portfolio: "www.sandrasportfolio.com",
+  currentJob: "Google",
+  currentSalary: "400k",
 };
 
-const hotel2 = {
-  name: "Leopard Mansion",
-  rooms: 96,
-  stars: "⭐⭐⭐",
-  costPerNightAdult: 120,
-  costPerNightChild: 180,
-};
+// Object.assign(target, source)
 
-// Constructor function
-function NationalParkHotels(data) {
-  this.name = data.name;
-  this.rooms = data.rooms;
-  this.stars = data.stars;
-  this.costPerNightAdult = data.costPerNightAdult;
-  this.costPerNightChild = data.costPerNightChild;
-  this.summariseHotel = () => {
-    console.log(`A night one stay 
-    at the ${this.name} for two adults and two children cost a
-    total of ${this.costPerNightAdult * 2 + this.costPerNightChild * 2}`);
+function DevProfile(data) {
+  Object.assign(this, data);
+  this.summariseDev = () => {
+    console.log(`${this.name}'s portfolio is at ${this.portfolio} and she work at ${this.currentJob}.
+    Her current salary is ${this.currentSalary}.
+    `);
   };
+
+  this.summariseStudent = () => {};
 }
 
-const safariView = new NationalParkHotels(hotel1);
-const leopardMansion = new NationalParkHotels(hotel2);
-
-safariView.summariseHotel();
-leopardMansion.summariseHotel();
+const sandraKaye = new DevProfile(sandraKayeProfileData);
+sandraKaye.summariseDev();
