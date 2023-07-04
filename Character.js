@@ -21,7 +21,9 @@ function Character(data) {
 
     this.health -= totalAttackScore;
     if (this.health <= 0) {
-      return (this.health = 0);
+      this.health = 0;
+      this.dead = true;
+      console.log(this.dead);
     }
   };
 
