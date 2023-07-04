@@ -1,9 +1,14 @@
 import Character from "./Character.js";
 import { characterData } from "./data.js";
 
+function attack() {
+  render();
+}
+
+document.getElementById("attack-button").addEventListener("click", attack);
+
 function render() {
   document.getElementById("hero").innerHTML = wizard.getCharacterHtml();
-
   document.getElementById("monster").innerHTML = orc.getCharacterHtml();
 }
 
