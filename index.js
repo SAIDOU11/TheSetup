@@ -1,7 +1,11 @@
 import Character from "./Character.js";
-import { characterData } from "./data.js";
+import characterData from "./data.js";
 
 function attack() {
+  wizard.getDiceHtml();
+  orc.getDiceHtml();
+  wizard.takeDamage(orc.currentDiceScore);
+  orc.takeDamage(wizard.currentDiceScore);
   render();
 }
 
