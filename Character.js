@@ -1,4 +1,4 @@
-import { getDiceRollArray } from "./rollArray.js";
+import { getDiceRollArray } from "./utils.js";
 
 function Character(data) {
   Object.assign(this, data);

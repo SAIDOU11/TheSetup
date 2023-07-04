@@ -14,11 +14,3 @@ const characterData = {
 };
 
 export { characterData };
-
-// export default characterData;
-// We can call it whatever we want .. default we can export only 1 file
-
-// ************
-
-// export { characterData };
-// Name is fixed cannot be changed.
