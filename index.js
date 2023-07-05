@@ -13,7 +13,19 @@ function attack() {
 }
 
 function endGame() {
-  console.log("The game is over");
+  const endMessage =
+    orc.health === 0 && wizard.health === 0
+      ? "No victors - all creatures are dead"
+      : orc.health === 0
+      ? "The Wizard wins"
+      : "The Orc is victorious";
+
+  const endEmoji =
+    orc.health === 0 && wizard.health === 0
+      ? "☠️"
+      : orc.health === 0
+      ? "🔮"
+      : "☠️";
 }
 
 document.getElementById("attack-button").addEventListener("click", attack);

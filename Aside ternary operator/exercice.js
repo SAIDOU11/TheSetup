@@ -1,6 +1,11 @@
-const playerGuess = 8;
+const playerGuess = 9;
 const corrrectAnswer = 6;
 
-// let message = "";
+const logMessage =
+  playerGuess < corrrectAnswer
+    ? "Too low"
+    : playerGuess > corrrectAnswer
+    ? "Too high"
+    : "Exactly right";
 
-console.log(message);
+console.log(logMessage);

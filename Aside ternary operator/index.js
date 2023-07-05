@@ -1,11 +1,10 @@
-const exerciseTime = 10;
+const exerciseTime = 70;
 
-// let message = "";
-
-// if (exerciseTime < 30) {
-//   message = "You need to try harder";
-//  else {
-//   message = "Excellent";
-// }
+const message =
+  exerciseTime < 30
+    ? "You need to try harder"
+    : exerciseTime < 60
+    ? "Doing Good"
+    : "Excellent";
 
 // console.log(message);
