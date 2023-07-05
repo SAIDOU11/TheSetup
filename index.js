@@ -20,12 +20,13 @@ function endGame() {
       ? "The Wizard wins"
       : "The Orc is victorious";
 
-  const endEmoji =
-    orc.health === 0 && wizard.health === 0
-      ? "☠️"
-      : orc.health === 0
-      ? "🔮"
-      : "☠️";
+  const endEmoji = wizard.health > 0 ? "🔮" : "☠️";
+  document.body.innerHTML = `
+  <div class="end-game">
+    <h2>Game Over</h2>
+    <h3>${endMessage}</h3>
+    <p class="end-emoji">${endEmoji}</p>
+  </div>`;
 }
 
 document.getElementById("attack-button").addEventListener("click", attack);
