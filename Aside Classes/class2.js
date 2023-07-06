@@ -15,3 +15,19 @@ const moduleStats = {
     studentsCompleted: 4357,
   },
 };
+
+// class Module {
+//   constructor(data) {
+//     Object.assign(this, data);
+//     // property
+//     this.percentageCompleted =
+//       100 * (this.studentsCompleted / this.studentsEnrolled);
+//   }
+//   // method()
+//   logpercentageCompleted() {
+//     console.log(this.percentageCompleted);
+//   }
+// }
+
+// const responsiveDesign = new Module(moduleStats.module3);
+// responsiveDesign.logpercentageCompleted();

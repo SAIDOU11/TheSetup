@@ -39,5 +39,10 @@ h1{
 
 .site-name{
     font-weight: 800;
+    margin-bottom: 3.15em;
+}
+
+.highlight{
+    color: red;
     font-weight: 800;
 }
