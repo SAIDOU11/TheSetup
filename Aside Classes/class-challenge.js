@@ -21,30 +21,30 @@ const adData = {
 
 class AdvertisingChannel {
   constructor(data) {
+    // properties
     Object.assign(this, data);
-    this.conversionRate = (100 * (this.conversions / this.clicks)).toFixed(1);
+    this.conversionRate = ((this.conversions / this.clicks) * 100).toFixed(1);
   }
+
   getAdvertisingChannelHtml() {
-    const { site, adViews, clicks, conversions, conversionRate } = this;
+    // methods
+    const { conversionRate, conversions, adViews, site, clicks } = this;
     return `
     <div class="site-name"> ${site} </div>
     <div>Views: ${adViews} </div>
     <div>Clicks: ${clicks} </div>
     <div>Conversions: ${conversions} </div>
     <div>Conv. Rate: <span class="highlight"> ${conversionRate} %</span></div>
-    `;
+`;
   }
 }
 
-const renderFacebook = new AdvertisingChannel(adData.facebook);
-const renderTwitter = new AdvertisingChannel(adData.twitter);
-const renderInstagram = new AdvertisingChannel(adData.instagram);
+//instances
+const facebook = new AdvertisingChannel(adData.facebook);
+const twitter = new AdvertisingChannel(adData.twitter);
+const instagram = new AdvertisingChannel(adData.instagram);
 
-document.getElementById("fb").innerHTML =
-  renderFacebook.getAdvertisingChannelHtml();
-
-document.getElementById("twit").innerHTML =
-  renderTwitter.getAdvertisingChannelHtml();
-
+document.getElementById("fb").innerHTML = facebook.getAdvertisingChannelHtml();
+document.getElementById("twit").innerHTML = twitter.getAdvertisingChannelHtml();
 document.getElementById("insta").innerHTML =
-  renderInstagram.getAdvertisingChannelHtml();
+  instagram.getAdvertisingChannelHtml();
