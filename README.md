@@ -2,4 +2,4 @@
 
 # Module 7 Scrimba Bootcamp
 
-- The Setup
+- The Setup Game
